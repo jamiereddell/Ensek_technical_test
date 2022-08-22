@@ -136,9 +136,9 @@ namespace ReddellJ.UsageImporter.Tests
             accountRepository.Setup(x => x.Get(1001)).Returns(new Account { Id = 1001, Name = "ACME" });
 
             var response = controller.Upload("sample.csv") as OkObjectResult;
-            var responseValue = response.Value as UploadResponse;
-
             Assert.That(response, Is.InstanceOf<OkObjectResult>());
+
+            var responseValue = response.Value as UploadResponse;
             Assert.That(responseValue, Is.Not.Null);
             Assert.That(responseValue.Processed, Is.EqualTo(1));
             Assert.That(responseValue.Invalid, Is.EqualTo(1));
