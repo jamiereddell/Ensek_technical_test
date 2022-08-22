@@ -1,5 +1,0 @@
-﻿CREATE TABLE [dbo].[UsageFile]
-(
-	[Id] INT NOT NULL PRIMARY KEY IDENTITY, 
-    [Filename] NVARCHAR(MAX) NOT NULL
-)
