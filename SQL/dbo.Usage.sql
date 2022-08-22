@@ -1,0 +1,5 @@
+﻿CREATE TABLE [dbo].[Usage]
+(
+	[Id] INT NOT NULL PRIMARY KEY,
+	[Usage] VARCHAR(5) NOT NULL
+)
